@@ -1,0 +1,8 @@
+.wellcomeMessage{
+    text-align: center;
+}
+
+.wellcomeMessage p{
+    font-size: 1.3rem;
+    padding: 1.3em;
+}
