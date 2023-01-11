@@ -6,7 +6,8 @@
 }
 
 .stockQuantity span {
-    padding: 0 45px;
+    padding: .5em 45px;
+    
 }
 
 .stockQuantity button {

@@ -13,7 +13,7 @@ const ItemCount = ({ stock }) => {
   };
 
   return (
-    <div className="stockQuantity w-100">
+    <div className="stockQuantity">
       <button onClick={handleButtonDecrement}>-</button>
       <span>{quantity}</span>
       <button onClick={handleButtonIncrement}>+</button>
