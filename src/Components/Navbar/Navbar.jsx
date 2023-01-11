@@ -1,43 +1,53 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import Categorias from "./Categorias";
+import './Navbar.css'
 
 const Navbar = () => {
-  const categoryList = ["Hogar", "Tecnologia", "Jardin"];
+  const categories = [
+    "notebook",
+    "pc",
+    "celulares",
+    "tablets",
+    "monitores",
+    "accesorios",
+  ];
 
   return (
-    <nav className="navbar navbar-expand-lg bg-light py-3">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          Libre Mercado
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNavDropdown"
-        >
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
-                Inicio
-              </a>
-            </li>
-            <Categorias categoryList={categoryList} />
-          </ul>
-          <CartWidget />
+    <header>
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
+          <Link to={"/"} className="navbar-brand">
+            Libre Mercado
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul className="navbar-nav text-end">
+              <li className="nav-item">
+                <Link className="nav-link" aria-current="page" to={"/"}>
+                  Inicio
+                </Link>
+              </li>
+              <Categorias categoryList={categories} />
+            </ul>
+            <CartWidget quantity={0} />
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 

@@ -1,0 +1,32 @@
+.navbar {
+    background-color: rgb(60, 4, 190);
+    padding: 3em 2em;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: rgb(223, 210, 247);
+}
+
+.navbar .navbar-toggler {
+    background-color: rgb(223, 210, 247);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: rgb(223, 210, 247);
+    padding: 1em;
+}
+
+.navbar .navbar-nav .dropdown-menu {
+    background-color: rgb(60, 4, 190);
+    border: none;
+}
+
+.navbar .navbar-nav .dropdown-menu .dropdown-item {
+    color: rgb(223, 210, 247);
+}
+
+.navbar .navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: rgb(60, 4, 190);
+}

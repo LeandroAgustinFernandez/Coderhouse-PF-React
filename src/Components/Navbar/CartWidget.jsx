@@ -1,11 +1,12 @@
-import "./CartWidget.css"
+import { Link } from "react-router-dom";
+import "./CartWidget.css";
 
-const CartWidget = () => {
+const CartWidget = ({ quantity }) => {
   return (
-    <div className="navbar-cart">
-      <i class="fa fa-shopping-cart fa-2x"></i>
-      <div class="cart-contador">0</div>
-    </div>
+    <Link className="navbar-cart">
+      <i className="fa fa-shopping-cart fa-2x"></i>
+      <div className="cart-contador">{quantity}</div>
+    </Link>
   );
 };
 

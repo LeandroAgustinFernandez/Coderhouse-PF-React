@@ -3,6 +3,7 @@
 }
 
 .wellcomeMessage p{
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     padding: 1.3em;
+    font-weight: bold;
 }

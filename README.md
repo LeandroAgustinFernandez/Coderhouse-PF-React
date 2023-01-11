@@ -1,3 +1,8 @@
+# E-Commerce project developed with the React
+
+This project is created for Coderhouse's React Js course.
+Implements hooks and "react-router-dom"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

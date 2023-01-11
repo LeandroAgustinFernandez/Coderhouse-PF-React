@@ -1,17 +1,19 @@
 .navbar-cart {
+    text-decoration: none;
+    color: rgb(223, 210, 247);
     position: relative;
     cursor: pointer;
     padding-right: 10px;
     margin-right: 10px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .cart-contador {
     position: absolute;
     bottom: -8px;
     right: -10px;
-    background-color: red;
+    background-color: rgb(90, 109, 28);
     color: #D6D6D6;
     font-weight: bold;
     font-size: 1rem;

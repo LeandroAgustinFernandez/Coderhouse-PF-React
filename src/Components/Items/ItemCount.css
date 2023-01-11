@@ -1,0 +1,17 @@
+.stockQuantity {
+    border: 1px solid rgb(196, 194, 194);
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stockQuantity span {
+    padding: 0 45px;
+}
+
+.stockQuantity button {
+    background-color: rgb(236, 244, 247);
+    border: none;
+    padding: 3px 10px;
+    font-weight: bold;
+}
