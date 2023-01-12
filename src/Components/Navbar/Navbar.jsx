@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import Categorias from "./Categorias";
-import './Navbar.css'
+import "./Navbar.css";
 
 const Navbar = () => {
   const categories = [
@@ -37,9 +37,15 @@ const Navbar = () => {
           >
             <ul className="navbar-nav text-end">
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to={"/"}>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link isActive" : "nav-link"
+                  }
+                  aria-current="page"
+                  to={"/"}
+                >
                   Inicio
-                </Link>
+                </NavLink>
               </li>
               <Categorias categoryList={categories} />
             </ul>

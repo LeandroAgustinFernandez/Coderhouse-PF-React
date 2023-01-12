@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Categorias = ({ categoryList }) => {
   return (
@@ -16,9 +16,14 @@ const Categorias = ({ categoryList }) => {
       <ul className="dropdown-menu text-end">
         {categoryList.map((category) => (
           <li key={category}>
-            <Link className="dropdown-item" to={"/category/"+category}>
-              {category[0].toUpperCase()+category.substring(1)}
-            </Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "dropdown-item isActive" : "dropdown-item"
+              }
+              to={"/category/" + category}
+            >
+              {category[0].toUpperCase() + category.substring(1)}
+            </NavLink>
           </li>
         ))}
       </ul>
