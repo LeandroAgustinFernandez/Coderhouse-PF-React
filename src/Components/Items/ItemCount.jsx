@@ -1,11 +1,8 @@
-import React, { useState } from "react";
 import "./ItemCount.css";
 
-const ItemCount = ({ stock }) => {
-  const [quantity, setQuantity] = useState(1);
-
+const ItemCount = ({ stock, quantity, setQuantity, quantityInCart }) => {
   const handleButtonIncrement = () => {
-    quantity < stock && setQuantity(quantity + 1);
+    quantity < (stock - quantityInCart) && setQuantity(quantity + 1);
   };
 
   const handleButtonDecrement = () => {
@@ -14,9 +11,9 @@ const ItemCount = ({ stock }) => {
 
   return (
     <div className="stockQuantity">
-      <button onClick={handleButtonDecrement}>-</button>
+      {quantity > 1 && <button onClick={handleButtonDecrement}>-</button>}
       <span>{quantity}</span>
-      <button onClick={handleButtonIncrement}>+</button>
+      {stock - quantityInCart > quantity && <button onClick={handleButtonIncrement}>+</button>}
     </div>
   );
 };

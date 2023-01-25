@@ -2,17 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import Categorias from "./Categorias";
 import "./Navbar.css";
+import { categories } from "../assets/categories";
+
 
 const Navbar = () => {
-  const categories = [
-    "notebook",
-    "pc",
-    "celulares",
-    "tablets",
-    "monitores",
-    "accesorios",
-  ];
-
   return (
     <header>
       <nav className="navbar navbar-expand-lg">
@@ -47,9 +40,20 @@ const Navbar = () => {
                   Inicio
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link isActive" : "nav-link"
+                  }
+                  aria-current="page"
+                  to={"/products"}
+                >
+                  Productos
+                </NavLink>
+              </li>
               <Categorias categoryList={categories} />
             </ul>
-            <CartWidget quantity={0} />
+            <CartWidget />
           </div>
         </div>
       </nav>

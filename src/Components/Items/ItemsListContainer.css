@@ -7,3 +7,15 @@
     padding: 1.3em;
     font-weight: bold;
 }
+
+@media (max-width: 756px) {
+    .wellcomeMessage .product-list{
+        padding: 1em 2em;
+    }
+}
+
+/* @media (min-width: 575px) {
+    .wellcomeMessage .product-list{
+        padding: 0 5em;
+    }
+} */

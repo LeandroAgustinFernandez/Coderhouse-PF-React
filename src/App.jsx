@@ -1,31 +1,43 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ItemDetailContainer from "./Components/Items/ItemDetailContainer";
-import ItemsListContainer from "./Components/Items/ItemsListContainer";
+import CartProvider from "./context/CartProvider";
 import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Components/Home/Home";
+import ItemsListContainer from "./Components/Items/ItemsListContainer";
+import ItemDetailContainer from "./Components/Items/ItemDetailContainer";
+import Cart from "./Components/Cart/Cart";
+import CheckOut from "./Components/Checkout/CheckOut";
 
 const App = () => {
   return (
-    <>
+    <CartProvider>
       <BrowserRouter>
         <Navbar />
         <Routes>
           <Route
             path="/"
             element={
-              <ItemsListContainer greetings="Bienvenido a Libre Mercado!" />
+              <Home />
+            }
+          />
+          <Route
+            path="/products"
+            element={
+              <ItemsListContainer />
             }
           />
           <Route
             path="/category/:categoryName"
             element={
-              <ItemsListContainer greetings="Bienvenido a Libre Mercado!" />
+              <ItemsListContainer />
             }
           />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckOut />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </CartProvider>
   );
 };
 

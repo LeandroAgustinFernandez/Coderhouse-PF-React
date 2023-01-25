@@ -1,36 +1,53 @@
 .navbar {
-    background-color: rgb(60, 4, 190);
+    background-color: rgb(255, 255, 255);
     padding: 3em 2em;
 }
 
 .navbar .navbar-brand {
     font-size: 1.7rem;
     font-weight: bold;
-    color: rgb(223, 210, 247);
+    color: rgb(8, 8, 8);
 }
 
 .navbar .navbar-toggler {
-    background-color: rgb(223, 210, 247);
+    background-color: rgb(255, 255, 255);
 }
 
 .navbar .navbar-nav .nav-link {
-    color: rgb(223, 210, 247);
+    color: rgb(8, 8, 8);
     padding: 1em;
 }
 
 .navbar .navbar-nav .dropdown-menu {
-    background-color: rgb(60, 4, 190);
-    border: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(8, 8, 8);
+    border-radius: 0px;
 }
 
 .navbar .navbar-nav .dropdown-menu .dropdown-item {
-    color: rgb(223, 210, 247);
+    color: rgb(8, 8, 8);
 }
 
 .navbar .navbar-nav .dropdown-menu .dropdown-item:hover {
-    color: rgb(60, 4, 190);
+    color: rgb(8, 8, 8);
 }
 
 .navbar .isActive {
     font-weight: bolder;
+}
+
+@media (max-width: 756px) {
+    .navbar {
+        padding: 3em 1em;
+    }
+}
+
+@media (max-width:320px) {
+    .navbar {
+        padding: 2em 1em;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 1.3rem; 
+    }
 }

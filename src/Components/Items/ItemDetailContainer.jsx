@@ -9,9 +9,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     getProducts("../products.json").then((data) => {
-      console.log(data);
       let itemList = data.filter((item) => item.id === parseInt(id));
-      console.log(itemList);
       setProduct(itemList[0]);
     });
   }, [id]);

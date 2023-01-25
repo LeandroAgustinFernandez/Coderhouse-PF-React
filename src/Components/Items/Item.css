@@ -4,7 +4,11 @@
 }
 
 .card:hover {
-    box-shadow: 3px 3px 10px rgb(60, 4, 190);
+    box-shadow: 3px 5px 10px rgb(105, 47, 241);
+}
+
+.card .header{
+    padding: 1em;
 }
 
 .btn {
@@ -12,10 +16,11 @@
 }
 
 .btn-secondary {
-    background-color: rgb(60, 4, 190);
+    background-color: rgb(119, 9, 55);
 }
 
 .btn-secondary:hover {
     background-color: rgb(223, 210, 247);
-    color: rgb(60, 4, 190);
+    color: rgb(119, 9, 55);
 }
+
