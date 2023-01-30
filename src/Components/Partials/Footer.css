@@ -1,0 +1,15 @@
+.footer{
+    background-color: var(--color-fifth);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-second);
+    height: 60px;
+}
+.footer p{
+    margin: 0;
+}
+.dark .footer{
+    background-color: var(--color-black);
+}
+

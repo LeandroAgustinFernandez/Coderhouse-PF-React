@@ -28,6 +28,7 @@ const CheckOut = () => {
   });
 
   const redirect = useNavigate();
+
   useEffect(() => {
     if (cart.length === 0) redirect("/");
   }, []);
@@ -60,7 +61,7 @@ const CheckOut = () => {
   };
 
   return (
-    <section className="checkout container my-5 p-5">
+    <section className="checkout container my-5 p-5  animate__animated animate__fadeIn animate__delay-1s">
       <h2 className="text-center">Detalle de la orden</h2>
       {showMessage && (
         <Message

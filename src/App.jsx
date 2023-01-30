@@ -9,6 +9,7 @@ import Cart from "./Components/Cart/Cart";
 import CheckOut from "./Components/Checkout/CheckOut";
 import "./App.css";
 import DarkModeProvider from "./context/DarkModeProvider";
+import Footer from "./Components/Partials/Footer";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/*" element={<ItemsListContainer />} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </CartProvider>
     </DarkModeProvider>
   );

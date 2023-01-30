@@ -1,5 +1,6 @@
 .wellcomeMessage{
     text-align: center;
+    flex: 1;
 }
 
 .wellcomeMessage p{

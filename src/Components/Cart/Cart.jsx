@@ -6,7 +6,6 @@ import CartItem from "./CartItem";
 import "./Cart.css";
 import Message from "../Partials/Message";
 import Button from "../Partials/Button";
-// import AlertConfirm from 'react-alert-confirm';
 
 const Cart = () => {
   const { cart, getTotalPrice, removeItemFromCart, clear } =
