@@ -2,7 +2,7 @@ import ItemCount from "./ItemCount";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/cartContext";
 import { useNavigate } from "react-router-dom";
-import CartButton from "../Cart/CartButton";
+import Button from "../Partials/Button";
 
 const ItemDetail = ({ product }) => {
   const { cart, addItemToCart, quantity, setQuantity, checkIfItemExistInCart } =
@@ -13,7 +13,7 @@ const ItemDetail = ({ product }) => {
   useEffect(() => {
     setQuantity(1);
     getQuantityIfExist();
-  }, [product]);
+  }, []);
 
   const addItem = () => {
     addItemToCart(product, quantity);
@@ -50,7 +50,6 @@ const ItemDetail = ({ product }) => {
               <p className="card-text">
                 <strong>Stock:</strong> {product.stock}
               </p>
-
               {quantityInCart > 0 && (
                 <p className="card-text">
                   <strong>En el carrito:</strong> {quantityInCart}
@@ -59,7 +58,7 @@ const ItemDetail = ({ product }) => {
             </div>
             <div className="d-flex align-items-center justify-content-around flex-md-row flex-column">
               {product.stock - quantityInCart <= 0 ? (
-                <CartButton route={"/cart"} text="Ir al carrito" />
+                <Button route={"/cart"} text="Ir al carrito" />
               ) : (
                 <>
                   <ItemCount

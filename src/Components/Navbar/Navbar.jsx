@@ -1,11 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import Categorias from "./Categorias";
+import Categories from "./Categories";
+import DarkModeToggler from "./DarkModeToggler";
 import "./Navbar.css";
-import { categories } from "../assets/categories";
-
+import { getCategories } from "../../assets/firebaseConnection";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
+const [categoriesFromDb, setCategoriesFromDb] = useState([])
+  useEffect(() => {
+    getCategories().then(res=>setCategoriesFromDb(res))
+  }, [])
+  
   return (
     <header>
       <nav className="navbar navbar-expand-lg">
@@ -29,6 +36,9 @@ const Navbar = () => {
             id="navbarNavDropdown"
           >
             <ul className="navbar-nav text-end">
+              <li>
+                <DarkModeToggler />
+              </li>
               <li className="nav-item">
                 <NavLink
                   className={({ isActive }) =>
@@ -51,7 +61,7 @@ const Navbar = () => {
                   Productos
                 </NavLink>
               </li>
-              <Categorias categoryList={categories} />
+              <Categories categoriesFromDb={categoriesFromDb} />
             </ul>
             <CartWidget />
           </div>

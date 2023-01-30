@@ -36,15 +36,12 @@ const CartProvider = ({ children }) => {
   const removeItemFromCart = (id) => {
     let copyCart = [];
     cart.forEach((item) => {
-      if (item.id !== parseInt(id)) return copyCart.push(item);
+      if (item.id !== id) return copyCart.push(item);
     });
-    console.log(copyCart);
     setCart([...copyCart]);
   };
 
-  const clear = () => {
-    setCart([]);
-  };
+  const clear = () => setCart([]);
 
   return (
     <CartContext.Provider
@@ -58,7 +55,7 @@ const CartProvider = ({ children }) => {
         setQuantity,
         getTotalPrice,
         removeItemFromCart,
-        clear
+        clear,
       }}
     >
       {children}

@@ -4,7 +4,7 @@
 }
 
 .card:hover {
-    box-shadow: 3px 5px 10px rgb(105, 47, 241);
+    box-shadow: 3px 5px 10px var(--color-fifth);
 }
 
 .card .header{
@@ -16,11 +16,22 @@
 }
 
 .btn-secondary {
-    background-color: rgb(119, 9, 55);
+    background-color: var(--color-first);
+    border-color: var(--color-first);
 }
 
 .btn-secondary:hover {
-    background-color: rgb(223, 210, 247);
-    color: rgb(119, 9, 55);
+    background-color: var(--color-second);
+    color: var(--color-first);
+    border-color: var(--color-first);
 }
 
+.dark .btn-secondary {
+    background-color: var(--color-fourth);
+    border-color: var(--color-fourth);
+}
+
+.dark .btn-secondary:hover {
+    background-color: var(--color-second);
+    color: var(--color-fourth);
+}

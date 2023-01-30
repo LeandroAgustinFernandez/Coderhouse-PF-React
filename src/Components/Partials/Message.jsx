@@ -1,5 +1,3 @@
-import React from "react";
-
 const Message = ({ setShowMessage, color, msg }) => {
   let classes = `alert alert-${color} alert-dismissible fade show text-center`;
   return (
@@ -10,9 +8,7 @@ const Message = ({ setShowMessage, color, msg }) => {
         className="btn-close"
         data-bs-dismiss="alert"
         aria-label="Close"
-        onClick={() => {
-          setShowMessage(false);
-        }}
+        onClick={() => setShowMessage(false)}
       ></button>
     </div>
   );

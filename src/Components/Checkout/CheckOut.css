@@ -1,0 +1,11 @@
+.fc-modified{
+    border-radius: 0px;
+}
+
+.checkout{
+    background-color: var(--color-white);
+}
+
+.dark .checkout{
+    background-color: var(--color-white);
+}

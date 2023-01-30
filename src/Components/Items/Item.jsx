@@ -3,7 +3,7 @@ import "./Item.css";
 
 const Item = ({ product }) => {
   return (
-    <article className="col-lg-3 col-md-4 col-sm-12 col-12 mb-3">
+    <article className="col-lg-3 col-md-4 col-sm-12 col-12 mb-3 animate__animated animate__fadeIn">
       <div className="card h-100">
         <div className="header">
           <img

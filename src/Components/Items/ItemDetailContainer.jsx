@@ -1,24 +1,41 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProducts } from "../assets/products";
+import { getItem } from "../../assets/firebaseConnection";
 import ItemDetail from "./ItemDetail";
+import Spinner from "../Partials/Spinner";
+import Error from "../Error/Error";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
+  const [showSpinner, setShowSpinner] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
-    getProducts("../products.json").then((data) => {
-      let itemList = data.filter((item) => item.id === parseInt(id));
-      setProduct(itemList[0]);
-    });
+    setShowSpinner(true);
+    getItem(id)
+      .then((product) => {
+        setProduct(product);
+      })
+      .then(() => {
+        setTimeout(() => {
+          setShowSpinner(false);
+        }, 1000);
+      });
   }, [id]);
 
   return (
     <section className="container vh-100 mt-5">
-      <article className="d-flex justify-content-center">
-        <ItemDetail product={product} />
-      </article>
+      {showSpinner ? (
+        <Spinner />
+      ) : (
+        <article className="d-flex justify-content-center">
+          {product ? (
+            <ItemDetail product={product} />
+          ) : (
+            <Error text={`El producto con id ${id} no existe`} />
+          )}
+        </article>
+      )}
     </section>
   );
 };

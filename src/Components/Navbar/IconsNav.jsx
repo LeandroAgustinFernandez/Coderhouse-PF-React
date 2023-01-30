@@ -1,5 +1,5 @@
 import IconNav from "./IconNav";
-import { icons } from "../assets/categories";
+import { icons } from "../../assets/categories";
 import "./IconsNav.css";
 
 const IconsNav = ({ categoryName }) => {

@@ -24,12 +24,3 @@ export const icons = [
     img: "headphone.png",
   },
 ];
-
-export const categories = [
-  "notebook",
-  "pc",
-  "celulares",
-  "tablets",
-  "monitores",
-  "accesorios",
-];

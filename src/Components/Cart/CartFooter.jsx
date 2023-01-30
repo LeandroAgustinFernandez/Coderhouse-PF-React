@@ -1,4 +1,4 @@
-import CartButton from "./CartButton";
+import Button from "../Partials/Button";
 
 const CartFooter = ({getTotal,removeAll}) => {
   return (
@@ -7,8 +7,8 @@ const CartFooter = ({getTotal,removeAll}) => {
         Total: ${Intl.NumberFormat("de-DE").format(getTotal())}
       </h4>
       <div className="">
-        <CartButton route="/checkout" text={"Finalizar compra"} />
-        <CartButton route="/products" text={"Continuar comprando"} />
+        <Button route="/checkout" text={"Finalizar compra"} />
+        <Button route="/products" text={"Continuar comprando"} />
         <button onClick={removeAll} className="btn btn-secondary mt-2">Vaciar Carrito</button>
       </div>
     </footer>
