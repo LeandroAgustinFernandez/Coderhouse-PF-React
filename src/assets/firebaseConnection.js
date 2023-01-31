@@ -8,6 +8,7 @@ import {
   doc,
   query,
   where,
+  updateDoc,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -64,6 +65,13 @@ const getItemsByCategory = async (category) => {
 
 export const getItems = (category = null) => {
   return category ? getItemsByCategory(category) : getAllItems();
+};
+
+export const updateItem = async (product) => {
+  const { id, quantity, ...attributes } = product;
+  attributes.stock -= quantity;
+  let response = doc(db, "items", id);
+  return await updateDoc(response, attributes);
 };
 
 export const addCategoriesToDB = async () => {

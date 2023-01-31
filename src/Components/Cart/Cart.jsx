@@ -3,9 +3,9 @@ import { useLocation } from "react-router-dom";
 import { CartContext } from "../../context/cartContext";
 import CartFooter from "./CartFooter";
 import CartItem from "./CartItem";
-import "./Cart.css";
 import Message from "../Partials/Message";
 import Button from "../Partials/Button";
+import "./Cart.css";
 
 const Cart = () => {
   const { cart, getTotalPrice, removeItemFromCart, clear } =

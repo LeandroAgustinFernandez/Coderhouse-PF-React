@@ -1,8 +1,8 @@
 import ItemCount from "./ItemCount";
+import Button from "../Partials/Button";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/cartContext";
 import { useNavigate } from "react-router-dom";
-import Button from "../Partials/Button";
 
 const ItemDetail = ({ product }) => {
   const { cart, addItemToCart, quantity, setQuantity, checkIfItemExistInCart } =
@@ -11,6 +11,7 @@ const ItemDetail = ({ product }) => {
   const cartPage = useNavigate();
 
   useEffect(() => {
+    console.log(cart);
     setQuantity(1);
     getQuantityIfExist();
   }, []);

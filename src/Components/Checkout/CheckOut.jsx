@@ -5,7 +5,7 @@ import ProductList from "./ProductList";
 import Message from "../Partials/Message";
 import Button from "../Partials/Button";
 import { useNavigate } from "react-router-dom";
-import { addOrder } from "../../assets/firebaseConnection";
+import { addOrder, updateItem } from "../../assets/firebaseConnection";
 import { createOrder, validateUserInfo } from "../../assets/CheckOutFunctions";
 import "./CheckOut.css";
 
@@ -38,6 +38,10 @@ const CheckOut = () => {
     setPersonalInfo({ ...personalInfo, [name]: value });
   };
 
+  const updateStock = () => {
+    cart.forEach((item) => updateItem(item));
+  };
+
   const handleClick = () => {
     if (validateUserInfo(personalInfo)) {
       const order = createOrder(personalInfo, cart, getTotalPrice());
@@ -49,6 +53,7 @@ const CheckOut = () => {
         setShowMessage(true);
         setShowInfo(false);
         setPersonalInfo(PERSONAL_INFO);
+        updateStock();
         clear();
       });
     } else {
