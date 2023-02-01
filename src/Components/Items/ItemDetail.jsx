@@ -61,22 +61,17 @@ const ItemDetail = ({ product }) => {
               {product.stock - quantityInCart <= 0 ? (
                 <Button route={"/cart"} text="Ir al carrito" />
               ) : (
-                product.stock !== 0 && (
-                  <>
-                    <ItemCount
-                      stock={product.stock}
-                      quantityInCart={quantityInCart}
-                      quantity={quantity}
-                      setQuantity={setQuantity}
-                    />
-                    <button
-                      onClick={addItem}
-                      className="btn btn-secondary my-2"
-                    >
-                      Agregar al carrito
-                    </button>
-                  </>
-                )
+                <>
+                  <ItemCount
+                    stock={product.stock}
+                    quantityInCart={quantityInCart}
+                    quantity={quantity}
+                    setQuantity={setQuantity}
+                  />
+                  <button onClick={addItem} className="btn btn-secondary my-2">
+                    Agregar al carrito
+                  </button>
+                </>
               )}
             </div>
           </div>
