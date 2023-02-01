@@ -61,7 +61,7 @@ const ItemDetail = ({ product }) => {
               {product.stock - quantityInCart <= 0 ? (
                 <>
                   <Button route={"/cart"} text="Ir al carrito" />
-                  <Button route={"/"} text="Ir a productos" />
+                  <Button route={"/products"} text="Ir a productos" />
                 </>
               ) : (
                 <>
