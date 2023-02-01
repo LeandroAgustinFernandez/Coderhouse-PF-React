@@ -23,7 +23,7 @@
 
 .home .home-btn {
     color: var(--color-third);
-    margin-top: 4em;
+    margin: 2em 0 1em;
     border: 3px solid var(--color-third);
     font-size: 2em;
 }
@@ -45,7 +45,21 @@
     background-color: var(--color-second);
 }
 
-@media (max-width: 756px) {
+@media (max-width: 1440px) {
+    .home {
+        padding: 5em 2em;
+        background-size: 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home {
+        padding: 5em 2em;
+        background-size: 70%;
+    }
+}
+
+@media (max-width: 768px) {
     .home {
         padding: 5em 2em;
         background-image: none;

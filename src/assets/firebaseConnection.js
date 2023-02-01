@@ -12,7 +12,7 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_APIKEY,
+  apiKey: 'AIzaSyCXt24DLbizoWFBjpmoVkywmWR38YAiSn4',
   authDomain: 'coderhouse-ecommerce-ceaff.firebaseapp.com',
   projectId: 'coderhouse-ecommerce-ceaff',
   storageBucket: 'coderhouse-ecommerce-ceaff.appspot.com',
