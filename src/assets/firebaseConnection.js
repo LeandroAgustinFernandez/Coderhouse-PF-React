@@ -13,11 +13,11 @@ import {
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_APIKEY,
-  authDomain: process.env.REACT_APP_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_PROJECTID,
-  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_APPID,
+  authDomain: 'coderhouse-ecommerce-ceaff.firebaseapp.com',
+  projectId: 'coderhouse-ecommerce-ceaff',
+  storageBucket: 'coderhouse-ecommerce-ceaff.appspot.com',
+  messagingSenderId: '721036202798',
+  appId: '1:721036202798:web:9aca655a4ba6c7025020bf',
 };
 
 const app = initializeApp(firebaseConfig);
