@@ -59,7 +59,10 @@ const ItemDetail = ({ product }) => {
             </div>
             <div className="d-flex align-items-center justify-content-around flex-md-row flex-column">
               {product.stock - quantityInCart <= 0 ? (
-                <Button route={"/cart"} text="Ir al carrito" />
+                <>
+                  <Button route={"/cart"} text="Ir al carrito" />
+                  <Button route={"/"} text="Ir a productos" />
+                </>
               ) : (
                 <>
                   <ItemCount

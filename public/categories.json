@@ -1,0 +1,26 @@
+[
+    {
+        "key": "accesorios",
+        "description":"Accesorios"
+    },
+    {
+        "key": "notebook",
+        "description":"Notebook"
+    },
+    {
+        "key": "celulares",
+        "description":"Celulares"
+    },
+    {
+        "key": "monitores",
+        "description":"Monitores"
+    },
+    {
+        "key": "tablets",
+        "description":"Tablets"
+    },
+    {
+        "key": "pc",
+        "description":"Pc"
+    }
+]
