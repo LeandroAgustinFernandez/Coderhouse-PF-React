@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   return (
-    <section className="container vh-100 mt-5">
+    <section className="container flex-grow-1 mt-5">
       {showSpinner ? (
         <Spinner />
       ) : (

@@ -4,8 +4,10 @@
 
 .checkout{
     background-color: var(--color-white);
+    flex: 1;
 }
 
 .dark .checkout{
     background-color: var(--color-white);
+    flex: 1;
 }
