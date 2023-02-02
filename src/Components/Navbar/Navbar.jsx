@@ -3,8 +3,7 @@ import CartWidget from "./CartWidget";
 import Categories from "./Categories";
 import DarkModeToggler from "./DarkModeToggler";
 import { getCategories } from "../../assets/firebaseConnection";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
