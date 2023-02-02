@@ -10,7 +10,7 @@ Dentro del detalle pueden agregar productos al carrito siempre que no supere el 
 En el carrito se visualizará la lista de productos que fue agregando el usuario, permitiendole eliminar alguno de ser necesario o finalizar la compra. En el ultimo caso, será direccionado a realizar el checkout donde se solicitarán sus datos personales para registrar la compra.
 El usuario puede utilizar modo oscuro o claro en caso de preferirlo.
 
-![Preview](https://drive.google.com/file/d/1pm1T2Raao-RM0-aJS1UfCD27tCU6Yr_H/view)
+[Preview](https://drive.google.com/file/d/1pm1T2Raao-RM0-aJS1UfCD27tCU6Yr_H/view)
 
 ## Librerias
 
