@@ -11,6 +11,7 @@ En el carrito se visualizará la lista de productos que fue agregando el usuario
 El usuario puede utilizar modo oscuro o claro en caso de preferirlo.
 
 [Preview](https://drive.google.com/file/d/1pm1T2Raao-RM0-aJS1UfCD27tCU6Yr_H/view)
+[Live](https://coderhouse-pf-react.vercel.app/)
 
 ## Librerias
 
