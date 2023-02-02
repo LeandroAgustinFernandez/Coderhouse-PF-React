@@ -2,10 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import Categories from "./Categories";
 import DarkModeToggler from "./DarkModeToggler";
-import "./Navbar.css";
 import { getCategories } from "../../assets/firebaseConnection";
 import { useEffect } from "react";
 import { useState } from "react";
+import "./Navbar.css";
 
 const Navbar = () => {
 const [categoriesFromDb, setCategoriesFromDb] = useState([])

@@ -1,5 +1,3 @@
-import React from "react";
-
 const ProductList = ({ cart,getTotalPrice }) => {
   return (
     <section className="d-flex flex-column mb-3 mb-md-0">
