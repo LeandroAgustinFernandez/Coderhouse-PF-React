@@ -31,6 +31,5 @@ export const validateUserInfo = (personalInfo) => {
   for (const key in personalInfo) {
     if (personalInfo[key] === "") return false;
   }
-  if (personalInfo.email !== personalInfo.emailConfirm) return false;
   return true;
 };

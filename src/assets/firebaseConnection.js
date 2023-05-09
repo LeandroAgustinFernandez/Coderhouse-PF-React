@@ -129,3 +129,4 @@ export const userLogin = async ({ email, password }) => {
 export const userLogOut = () => {
   auth.signOut();
 }
+

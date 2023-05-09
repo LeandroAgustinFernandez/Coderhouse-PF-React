@@ -10,6 +10,7 @@ const InputForm = ({ text, type, name, value, handleChange }) => {
         onChange={handleChange}
         value={value}
         className="form-control fc-modified"
+        disabled
       />
     </div>
   );

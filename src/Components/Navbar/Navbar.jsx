@@ -18,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    auth.onAuthStateChanged((user) => {
+    auth.onAuthStateChanged((user) => { 
       user ? setUsername(user.displayName) : setUsername("");
     });
   }, []);
