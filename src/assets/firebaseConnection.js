@@ -1,5 +1,12 @@
 import { initializeApp } from "firebase/app";
 import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
+
+import {
   getFirestore,
   addDoc,
   getDocs,
@@ -12,15 +19,16 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCXt24DLbizoWFBjpmoVkywmWR38YAiSn4',
-  authDomain: 'coderhouse-ecommerce-ceaff.firebaseapp.com',
-  projectId: 'coderhouse-ecommerce-ceaff',
-  storageBucket: 'coderhouse-ecommerce-ceaff.appspot.com',
-  messagingSenderId: '721036202798',
-  appId: '1:721036202798:web:9aca655a4ba6c7025020bf',
+  apiKey: "AIzaSyCXt24DLbizoWFBjpmoVkywmWR38YAiSn4",
+  authDomain: "coderhouse-ecommerce-ceaff.firebaseapp.com",
+  projectId: "coderhouse-ecommerce-ceaff",
+  storageBucket: "coderhouse-ecommerce-ceaff.appspot.com",
+  messagingSenderId: "721036202798",
+  appId: "1:721036202798:web:9aca655a4ba6c7025020bf",
 };
 
 const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
 const db = getFirestore();
 
 export const addItemsToDB = async () => {
@@ -95,3 +103,29 @@ export const getCategories = async () => {
 export const addOrder = async (order) => {
   return await addDoc(collection(db, "orders"), order);
 };
+
+export const userRegister = async ({ name, email, password }) => {
+  try {
+    let register = await createUserWithEmailAndPassword(auth, email, password);
+    let user = register.user;
+    await updateProfile(user, {
+      displayName: name,
+    });
+    return true;
+  } catch (error) {
+    return error.customData._tokenResponse;
+  }
+};
+
+export const userLogin = async ({ email, password }) => {
+  try {
+    let user = await signInWithEmailAndPassword(auth, email, password);
+    return user;
+  } catch (error) {
+    return {error};
+  }
+};
+
+export const userLogOut = () => {
+  auth.signOut();
+}

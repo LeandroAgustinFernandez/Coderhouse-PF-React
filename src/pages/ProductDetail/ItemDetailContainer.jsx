@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getItem } from "../../assets/firebaseConnection";
-import ItemDetail from "./ItemDetail";
-import Spinner from "../Partials/Spinner";
-import Error from "../Error/Error";
+import ItemDetail from "../../Components/Items/ItemDetail";
+import Spinner from "../../Components/Partials/Spinner";
+import Error from "../../Components/Error/Error";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});

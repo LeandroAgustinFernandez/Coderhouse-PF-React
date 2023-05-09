@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { CartContext } from "../../context/cartContext";
-import CartFooter from "./CartFooter";
-import CartItem from "./CartItem";
-import Message from "../Partials/Message";
-import Button from "../Partials/Button";
+import { CartContext } from "../../context/contexts";
+import CartFooter from "../../Components/Cart/CartFooter";
+import CartItem from "../../Components/Cart/CartItem";
+import Message from "../../Components/Partials/Message";
+import Button from "../../Components/Partials/Button";
 import "./Cart.css";
 
 const Cart = () => {

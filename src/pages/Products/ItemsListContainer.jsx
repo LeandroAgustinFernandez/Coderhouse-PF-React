@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import IconsNav from "../Navbar/IconsNav";
-import ItemList from "./ItemList";
-import Spinner from "../Partials/Spinner";
+import IconsNav from "../../Components/Navbar/IconsNav";
+import ItemList from "../../Components/Items/ItemList";
+import Spinner from "../../Components/Partials/Spinner";
 import { getItems } from "../../assets/firebaseConnection";
 import "./ItemsListContainer.css";
 

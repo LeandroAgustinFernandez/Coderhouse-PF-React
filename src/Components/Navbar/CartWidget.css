@@ -1,4 +1,4 @@
-.navbar-cart {
+.navbar-cart, .navbar-user {
     text-decoration: none;
     color: var(--color-second);
     position: relative;
@@ -9,8 +9,12 @@
     justify-content: flex-end;
 }
 
-.navbar-cart:hover {
+.navbar-cart:hover,.navbar-user:hover {
     color: var(--color-first);
+}
+
+.navbar-user{
+    padding-left: 1rem;
 }
 
 .cart-contador {

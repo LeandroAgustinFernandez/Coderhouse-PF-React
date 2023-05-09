@@ -1,9 +1,9 @@
 import { useEffect, useState, useContext } from "react";
-import { CartContext } from "../../context/cartContext";
-import FormCheckOut from "./FormCheckOut";
-import ProductList from "./ProductList";
-import Message from "../Partials/Message";
-import Button from "../Partials/Button";
+import { CartContext } from "../../context/contexts";
+import FormCheckOut from "../../Components/Checkout/FormCheckOut";
+import ProductList from "../../Components/Checkout/ProductList";
+import Message from "../../Components/Partials/Message";
+import Button from "../../Components/Partials/Button";
 import { useNavigate } from "react-router-dom";
 import { addOrder, updateItem } from "../../assets/firebaseConnection";
 import { createOrder, validateUserInfo } from "../../assets/CheckOutFunctions";

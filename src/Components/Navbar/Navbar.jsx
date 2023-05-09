@@ -2,16 +2,31 @@ import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import Categories from "./Categories";
 import DarkModeToggler from "./DarkModeToggler";
-import { getCategories } from "../../assets/firebaseConnection";
+import {
+  auth,
+  getCategories,
+  userLogOut,
+} from "../../assets/firebaseConnection";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
-const [categoriesFromDb, setCategoriesFromDb] = useState([])
+  const [categoriesFromDb, setCategoriesFromDb] = useState([]);
+  const [username, setUsername] = useState("");
   useEffect(() => {
-    getCategories().then(res=>setCategoriesFromDb(res))
-  }, [])
-  
+    getCategories().then((res) => setCategoriesFromDb(res));
+  }, []);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      user ? setUsername(user.displayName) : setUsername("");
+    });
+  }, []);
+
+  const handleLogout = () => {
+    userLogOut();
+  };
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg">
@@ -62,6 +77,18 @@ const [categoriesFromDb, setCategoriesFromDb] = useState([])
               </li>
               <Categories categoriesFromDb={categoriesFromDb} />
             </ul>
+            {username === "" ? (
+              <Link to={"./login"} className="navbar-user">
+                <i className="fa fa-user fa-2x"></i>
+              </Link>
+            ) : (
+              <span className="text-white">
+                {username}{" "}
+                <button onClick={handleLogout} className="btn">
+                  <i className="fa fa-arrow-right text-white"></i>
+                </button>
+              </span>
+            )}
             <CartWidget />
           </div>
         </div>
