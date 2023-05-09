@@ -1,7 +1,7 @@
 import Validator from "fastest-validator";
 import { useState } from "react";
 import { userRegister } from "../../assets/firebaseConnection";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Message from "../Partials/Message";
 
 const RegisterForm = () => {
@@ -40,12 +40,12 @@ const RegisterForm = () => {
     setMessageInfo({ color: "", msg: "" });
     setShowMessage(false);
     let res = await userRegister(formData);
-    if(res?.error) {
-        setMessageInfo({ color: "warning", msg: res.error.message });
-        setShowMessage(true);
-        return
+    if (res?.error) {
+      setMessageInfo({ color: "warning", msg: res.error.message });
+      setShowMessage(true);
+      return;
     }
-    navigate('/')
+    navigate("/");
   };
 
   const handleChange = ({ target }) => {
@@ -90,6 +90,9 @@ const RegisterForm = () => {
           <button type="submit" className="btn btn-secondary mt-2 w-100">
             Ingresar
           </button>
+          <p className="text-center mt-2">
+            Ya tienes cuenta? <Link to={"/login"}>Inicia sesión</Link>
+          </p>
         </form>
       </section>
     </>

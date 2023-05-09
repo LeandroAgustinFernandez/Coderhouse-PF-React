@@ -2,7 +2,7 @@ import RegisterForm from "../../Components/Forms/RegisterForm"
 
 const Register = () => {
   return (
-    <main className="container">
+    <main className="container login-main">
         <RegisterForm />
     </main>
   )
