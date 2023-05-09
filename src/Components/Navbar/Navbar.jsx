@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import Categories from "./Categories";
 import DarkModeToggler from "./DarkModeToggler";
@@ -17,14 +17,17 @@ const Navbar = () => {
     getCategories().then((res) => setCategoriesFromDb(res));
   }, []);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    auth.onAuthStateChanged((user) => { 
+    auth.onAuthStateChanged((user) => {
       user ? setUsername(user.displayName) : setUsername("");
     });
   }, []);
 
   const handleLogout = () => {
     userLogOut();
+    navigate("/");
   };
 
   return (
